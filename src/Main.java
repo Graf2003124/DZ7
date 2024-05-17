@@ -5,10 +5,8 @@ public class Main {
         int total = 0;
         int i = 0;
         while (total < 2_459_000) {
-            total = total + salary;
+            total += salary;
             i = i + 1;
-        }
-        {
             System.out.println("Месяцев " + i + " сумма накоплений равна " + total + " рублей");
         }
         System.out.println("Задача №2");
@@ -23,21 +21,23 @@ public class Main {
             System.out.print(" " + cyclone + " ");
         System.out.println();
         System.out.println("Задача №3");
+
         int population = 12_000_000;
-        int year = 0;
-        int birthRate = 0;
-        for (; year < 10; birthRate = (12_000_000 / 1000 * 17) - (12_000_000 / 1000 * 8)) {
-            year = year + 1;
-            population = population + birthRate;
-            System.out.println("Месяц " + year + " Итого " + population);
+        int increase;
+        int decrease;
+        for (int m = 1; m <= 10; m++){
+            increase = population / 1000 * 17;
+            decrease = population / 1000 * 8;
+            population += increase - decrease;
+            System.out.println("Год " +m+ " численность населения составляет " +population);
         }
         System.out.println("Задача №4");
         int income = 15_000;
         int totali = 0;
         int l = 0;
         for (; totali < 12_000_000; l++) {
-            totali = totali + (totali * 7 / 100);
-            totali = totali + income;
+            totali +=  (totali * 7 / 100);
+            totali += income;
             {
                 System.out.println("Месяц " + l + " Итого " + totali);
             }
@@ -47,8 +47,8 @@ public class Main {
         int totalii = 0;
         int j = 0;
         for (; totalii < 12_000_000; j++) {
-            totalii = totalii + (totalii * 7 / 100);
-            totalii = totalii + incomee;
+            totalii += (totalii * 7 / 100);
+            totalii += incomee;
             if (j % 6 == 0) {
                 System.out.println("Месяц " + j + " Итого " + totalii);
             }
@@ -58,8 +58,8 @@ public class Main {
         int totalni = 0;
         int month = 0;
         for (; month <= 108; month++) {
-            totalni = totalni + (totalni * 7 / 100);
-            totalni = totalni + accumulation;
+            totalni += (totalni * 7 / 100);
+            totalni += accumulation;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + " Итого " + totalni);
             }
