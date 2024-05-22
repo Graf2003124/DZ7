@@ -1,13 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задача №1");
-        int salary = 15_000;
-        int total = 0;
-        int i = 0;
-        while (total < 2_459_000) {
-            total += salary;
-            i = i + 1;
-            System.out.println("Месяцев " + i + " сумма накоплений равна " + total + " рублей");
+        int salary = 0;
+        int total = 1;
+        while (salary <= 2_459_000) {
+            salary = (int) ((salary + 15_000) * 1.01);
+            total++;
+            System.out.println("Месяцев " + total + " сумма накоплений равна " + salary + " рублей");
         }
         System.out.println("Задача №2");
         int cycle = 1;
@@ -25,18 +24,18 @@ public class Main {
         int population = 12_000_000;
         int increase;
         int decrease;
-        for (int m = 1; m <= 10; m++){
+        for (int m = 1; m <= 10; m++) {
             increase = population / 1000 * 17;
             decrease = population / 1000 * 8;
             population += increase - decrease;
-            System.out.println("Год " +m+ " численность населения составляет " +population);
+            System.out.println("Год " + m + " численность населения составляет " + population);
         }
         System.out.println("Задача №4");
         int income = 15_000;
         int totali = 0;
         int l = 0;
         for (; totali < 12_000_000; l++) {
-            totali +=  (totali * 7 / 100);
+            totali += (totali * 7 / 100);
             totali += income;
             {
                 System.out.println("Месяц " + l + " Итого " + totali);
